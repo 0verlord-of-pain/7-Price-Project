@@ -1,0 +1,12 @@
+<div class="card">
+  <img
+    src="{{ image.url }}"
+    (click)="modal = true"
+    (click)="getImageInfo(image.id)"
+  />
+</div>
+<app-image_pop_up
+  *ngIf="modal"
+  (close)="modal = false"
+  [imageInfo]="imageInfo"
+></app-image_pop_up>

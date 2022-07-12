@@ -1,0 +1,27 @@
+<div class="blackout"></div>
+
+<div class="card">
+  <img class="imageBlock" src="{{ imageInfo.url }}" />
+  <ul class="listComments">
+    <li *ngFor="let comment of imageInfo.comments">
+      {{ comment.date | date: "dd.MM.yyyy" }} {{ comment.text }}
+    </li>
+  </ul>
+  <div class="initForm">
+    <input
+      type="text"
+      class="entryField"
+      placeholder="Enter comment"
+      #entryField
+      name="entryField"
+    />
+    <button
+      class="enterBtn"
+      (click)="postComment()"
+      (click)="entryField.value = ''"
+    >
+      Enter
+    </button>
+  </div>
+  <button class="closeBtn" (click)="close.emit()">Close</button>
+</div>

@@ -1,0 +1,43 @@
+.blackout {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+.card {
+  z-index: 1;
+  position: fixed;
+  display: block;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+}
+
+.imageBlock {
+  max-width: 100%;
+  min-width: 300px;
+}
+
+.initForm {
+  position: relative;
+}
+
+.entryField {
+  display: block;
+  width: 100%;
+}
+
+.enterBtn {
+  position: absolute;
+  top: 0.4em;
+  right: 0.4em;
+  height: 2.2em;
+}
